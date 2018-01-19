@@ -33,7 +33,7 @@ onPlusClick = e => {
   console.log(resultSums)
 }
 
-diceCounts = () => $('.dice-list-item').toArray.map(function(listItem) {
+diceCounts = () => $('.dice-list-item').toArray().map(function(listItem) {
     return [$(listItem).find('.dice-list-description').html(), $(listItem).find('.counter').html()]
   }).get()
 
