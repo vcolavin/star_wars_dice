@@ -24,7 +24,7 @@ function select(anArray) {
 
 const dice = {
   green: [[], ["success"], ["success"], ["success", "success"], ["advantage"], ["advantage"], ["success", "advantage"], ["advantage", "advantage"]],
-  yellow: [],
+  yellow: [[], ["success"], ["success"], ["success", "success"], ["success", "success"], ["advantage"], ["advantage", "success"], ["advantage", "success"], ["advantage", "success"], ["advantage", "advantage"], ["advantage", "advantage"], ["triumph"]],
   blue: [[], [], ["success"], ["success", "advantage"], ["advantage", "advantage"], ["advantage"]],
   purple: [[], ["failure"], ["failure", "failure"], ["disadvantage"], ["disadvantage"], ["disadvantage"], ["disadvantage", "disadvantage"], ["failure", "disadvantage"]],
   red: [],
