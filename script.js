@@ -22,9 +22,9 @@ onPlusClick = e => {
   e.preventDefault()
 
   const resultSums = diceCounts().reduce((memo, countObject, index) => {
-    const key = countObject[0]
+    const key = Object.keys(countObject)[0]
     let returnMemo = { ...memo }
-    for (let i = 0; i++; i <= countObject[1]) {
+    for (let i = 0; i++; i <= countObject[key]) {
       select(dice[key]).forEach(result => returnMemo[diceMap[result + 1]]++)
     }
     return returnMemo
@@ -34,7 +34,7 @@ onPlusClick = e => {
 }
 
 diceCounts = () => $('.dice-list-item').map(function() {
-    return [$(this).find('.dice-list-description').html(), $(this).find('.counter').html()]
+    return {$(this).find('.dice-list-description').html(): $(this).find('.counter').html()}
   }).get()
 
 select = anArray => anArray[Math.floor(Math.random() * anArray.length)]
