@@ -33,8 +33,8 @@ onPlusClick = e => {
   console.log(resultSums)
 }
 
-diceCounts = () => $('.dice-list-item').map(function() {
-    return {$(this).find('.dice-list-description').html(): $(this).find('.counter').html()}
+diceCounts = () => $('.dice-list-item').toArray.map(function(listItem) {
+    return [$(listItem).find('.dice-list-description').html(), $(listItem).find('.counter').html()]
   }).get()
 
 select = anArray => anArray[Math.floor(Math.random() * anArray.length)]
