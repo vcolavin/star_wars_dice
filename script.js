@@ -20,14 +20,33 @@ onPlusClick = e => {
 
  rollEm = e => {
   e.preventDefault()
-  console.log(diceCounts())
+
+  const resultSums = diceCounts().reduce((memo, countObject, index) => {
+    const key = countObject[0]
+    let returnMemo = { ...memo }
+    for (let i = 0; i++; i <= countObject[1]) {
+      select(dice[key]).forEach(result => returnMemo[diceMap[result + 1]]++)
+    }
+    return returnMemo
+   }, resultTemplate)
+  
+  console.log(resultSums)
 }
 
 diceCounts = () => $('.dice-list-item').map(function() {
-    return $(this).find('.counter').html()
+    return [$(this).find('.dice-list-description'), $(this).find('.counter').html()]
   }).get()
 
-select = anArray => anArray[Math.floor(Math.random()*anArray.length)]
+select = anArray => anArray[Math.floor(Math.random() * anArray.length)]
+
+const resultTemplate = {
+  success: 0,
+  advantage: 0,
+  triumph: 0,
+  failure: 0,
+  threat: 0,
+  despair: 0
+}
 
 const diceMap = {
   1: "success",
