@@ -7,7 +7,7 @@ $(function() {
 function onMinusClick(e) {
   e.preventDefault()
   let currentValue = parseInt($(e.target).siblings('.counter').html())
-  if (currentValue > 1) {
+  if (currentValue > 0) {
     $(e.target).siblings('.counter').html(currentValue - 1)
   }
 }
