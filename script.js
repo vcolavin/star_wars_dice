@@ -18,7 +18,7 @@ onPlusClick = e => {
   $(e.target).siblings('.counter').html(currentValue + 1)
 }
 
- rollEm e => {
+ rollEm = e => {
   e.preventDefault()
   console.log(diceCounts())
 }
