@@ -1,9 +1,61 @@
 <HTML>
 <head>
   <title>some cool dice</title>
-  <script type='text/javascript' src='./script.js'/>
+  <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+  <script type='text/javascript' src='./script.js'></script>
 </head>
 <body>
-<h1>hello my friends</h1>
+  <h1>hello my friends</h1>
+  <div class="dice-container">
+    <ul class="dice-list">
+      <li id="green" class="dice-list-item">
+        <div class="counter-container">
+          <button class="minus">-</button>
+          <span class="counter">0</span>
+          <button class="plus">+</button>
+        </div>
+      </li>
+      <li id="yellow" class="dice-list-item">
+         <div class="counter-container">
+          <button class="minus">-</button>
+          <span class="counter">0</span>
+          <button class="plus">+</button>
+        </div>
+      </li>
+      <li id="blue" class="dice-list-item">
+        <div class="counter-container">
+          <button class="minus">-</button>
+          <span class="counter">0</span>
+          <button class="plus">+</button>
+        </div>
+      </li>
+      <li id="purple" class="dice-list-item">
+        <div class="counter-container">
+          <button class="minus">-</button>
+          <span class="counter">0</span>
+          <button class="plus">+</button>
+        </div>
+      </li>
+      <li id="red" class="dice-list-item">
+        <div class="counter-container">
+          <button class="minus">-</button>
+          <span class="counter">0</span>
+          <button class="plus">+</button>
+        </div>
+      </li>
+      <li id="black" class="dice-list-item">
+        <div class="counter-container">
+          <button class="minus">-+</button>
+          <span class="counter">0</span>
+          <button class="plus">+</button>
+        </div>
+      </li>
+    </ul>
+    <button class="dice-roll-button">Roll em!</button>
+    <span class="dice-roll-result"></span>
+  </div>
 </body>
 </HTML>
