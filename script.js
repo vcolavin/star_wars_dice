@@ -1,8 +1,13 @@
 $(function() {
   $(".counter-container .minus").click(onMinusClick)
   $(".counter-container .plus").click(onPlusClick)
+  $(".dice-roll-button").click(rollEm)
 })
 
+function rollEm(e) {
+  e.preventDefault()
+  // getSums()
+}
 
 function onMinusClick(e) {
   e.preventDefault()
@@ -27,7 +32,7 @@ const diceMap = {
   2: "advantage",
   3: "triumph",
   4: "failure",
-  5: "setback",
+  5: "threat",
   6: "despair"
 }
 
