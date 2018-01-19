@@ -22,11 +22,20 @@ function select(anArray) {
   return anArray[Math.floor(Math.random()*anArray.length)]
 }
 
+const diceMap = {
+  1: "success",
+  2: "advantage",
+  3: "triumph",
+  4: "failure",
+  5: "setback",
+  6: "despair"
+}
+
 const dice = {
-  green: [[], ["success"], ["success"], ["success", "success"], ["advantage"], ["advantage"], ["success", "advantage"], ["advantage", "advantage"]],
-  yellow: [[], ["success"], ["success"], ["success", "success"], ["success", "success"], ["advantage"], ["advantage", "success"], ["advantage", "success"], ["advantage", "success"], ["advantage", "advantage"], ["advantage", "advantage"], ["triumph"]],
-  blue: [[], [], ["success"], ["success", "advantage"], ["advantage", "advantage"], ["advantage"]],
-  purple: [[], ["failure"], ["failure", "failure"], ["disadvantage"], ["disadvantage"], ["disadvantage"], ["disadvantage", "disadvantage"], ["failure", "disadvantage"]],
-  red: [],
-  black: [[], [], ["failure"], ["failure"], ["setback"], ["setback"]]
+  green: [[], [1], [1], [1, 1], [2], [2], [1, 2], [2, 2]],
+  yellow: [[], [1], [1], [1, 1], [1, 1], [2], [2, 1], [2, 1], [2, 1], [2, 2], [2, 2], [3]],
+  blue: [[], [], [1], [1, 2], [2, 2], [2]],
+  purple: [[], [4], [4, 4], [5], [5], [5], [5, 5], [4, 5]],
+  red: [[], [4], [4], [4, 4], [4, 4], [5], [5], [4, 5], [4, 5], [5, 5], [5, 5], [6]],
+  black: [[], [], [4], [4], [5], [5]]
 }
